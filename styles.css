@@ -1,0 +1,50 @@
+.inputContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    gap: 10px;
+}
+input{
+    text-align: center;
+}
+.mainPiece{
+
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+}
+.gridElementBig{
+    width: 50px;
+    height: 50px;
+}
+.gridElementSmall{
+    width: 25px;
+    height: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 3px;
+}
+.gridElementSmaller{
+    width: 15px;
+    height: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+}
+.gridElementSmallest{
+    width: 7px;
+    height: 7px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 0.1px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sketch{
+    margin-top: 50px;
+}
