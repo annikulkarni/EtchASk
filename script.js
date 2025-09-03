@@ -50,9 +50,15 @@ var submit = document.querySelector(".submit").addEventListener("click", (e) => 
     }
 
     container.addEventListener("mouseover", (e) => {
-        if (e.target.classList.contains('piece')) {
+        if (e.target.classList.contains('piece')&& e.ctrlKey) {
+        }
+        else if (e.target.classList.contains('piece')&& e.shiftKey) {
             const cS = window.getComputedStyle(e.target);
-            const bC = cS.getPropertyValue('background-color');
+            const oP = cS.getPropertyValue('opacity');
+            e.target.style.opacity = 1;
+        }
+        else if (e.target.classList.contains('piece')) {
+            const cS = window.getComputedStyle(e.target);
             const oP = cS.getPropertyValue('opacity');
             e.target.style.opacity =  parseFloat(oP) + 0.1;
         }
