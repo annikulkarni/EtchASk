@@ -48,7 +48,7 @@ var submit = document.querySelector(".submit").addEventListener("click", (e) => 
             nodes[j].childNodes[0].style.opacity = 0;
         }
     }
-
+        
     container.addEventListener("mouseover", (e) => {
         if (e.target.classList.contains('piece')&& e.ctrlKey) {
         }
@@ -61,6 +61,17 @@ var submit = document.querySelector(".submit").addEventListener("click", (e) => 
             const cS = window.getComputedStyle(e.target);
             const oP = cS.getPropertyValue('opacity');
             e.target.style.opacity =  parseFloat(oP) + 0.1;
+            let opacity = 1;
+            const intervalId = setInterval(() => {
+                if (e.target.style.opacity > 0) {
+                    opacity -= 0.05;
+                    e.target.style.opacity = opacity;
+                }else {
+                    clearInterval(intervalId); 
+                    element.style.display = 'none'; 
+                }
+                
+            }, 50);
         }
     })
         
